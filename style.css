@@ -14,6 +14,16 @@ body{
 }
 .text-center{text-align: center;}
 /* utility classes */
+.line{
+    width: 200px;
+    height: 2px;
+    display: block;
+    background: orange;
+    margin: 10px auto;
+}
+span{
+    color: orange;
+}
 .container{
     max-width: 1000px;
     margin: 0 auto;
@@ -125,6 +135,10 @@ header .container{
     height: 300px;
     border-radius: 10px;
     object-fit: cover;
+    transition: all 0.4s;
+}
+.about .row .col-1 img:hover{
+    transform: scale(0.98);
 }
 .about .row .col-2{
     flex-basis: 60%;
@@ -138,14 +152,16 @@ header .container{
     padding: 10px;
 }
 .services .row .col-1{
-    /* color: 009; */
     flex-basis: 25%;
     margin: 10px 10px;
-    /* gap: 20px; */
     text-align: center;
     padding: 5px 10px;
     background: #f4f4f4f4;
     border-radius: 10px;
+    transition: all 0.4s;
+}
+.services .row .col-1:hover{
+    transform: scale(1.1);
 }
 .services .col-1 h3{
     color: #000;
