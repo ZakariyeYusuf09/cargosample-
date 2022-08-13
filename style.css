@@ -40,15 +40,54 @@ span{
 }
 .btn{
     text-decoration: none;
-    border: 2px red  solid;
     padding: 6px 11px;
     border-radius: 10px;
 
 }
+.btn1{
+    text-decoration: none;
+    border: 2px red  solid;
+    padding: 6px 11px;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+.btn1:hover{
+    background: red;
+    border: 2px solid red;
+    color: #fff;
+}
 .button{
     background: #fff;
     color: red;
+    transition: all 0.4s;
 }
+.btn3{
+    border: 2px #fff solid;
+    color: #fff;
+}
+.btn2{
+    background: #fff;
+    border: 2px #FFF solid;
+    transition: all .4s;
+    color: #000;
+    font-weight: 500;
+}
+.btn2:hover{
+    color: #fff;
+    border: 2px solid #fff;
+    background: transparent;
+}
+.btn3{
+    font-weight: 500;
+    transition: all .4s;
+}
+.btn3:hover{
+    background: #fff;
+    border: 2px #FFF solid;
+    color: #000;
+    
+}
+
 
 /* font size */
 .F-size1{font-size: 1.1em;}
@@ -94,6 +133,7 @@ header .container{
     margin-right: 20px;
 }
 .row ul li a{
+    font-weight: 500;
     text-decoration: none;
 }
 /* ================================== */
@@ -119,13 +159,7 @@ header .container{
 .row .col-2 img{
     max-width: 350px;
 }
-.row .col-1 .btn{
-    border:2px #fff solid;
-    
-}
-.row .col-1 .btnCol{
-    color: #fff;
-}
+
 /* ==================*/
 /* about */
 .about .row .col-1{
