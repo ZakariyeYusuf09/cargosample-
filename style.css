@@ -50,6 +50,7 @@ span{
     padding: 6px 11px;
     border-radius: 10px;
     transition: all 0.4s;
+    font-weight: 500;
 }
 .btn1:hover{
     background: red;
