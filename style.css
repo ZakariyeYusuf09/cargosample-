@@ -30,6 +30,7 @@ span{
     padding: 0 30px;
     overflow: hidden;
 }
+
 .row{
     /* margin: auto; */
     height: 100%;
@@ -42,11 +43,13 @@ span{
     border: 2px red  solid;
     padding: 6px 11px;
     border-radius: 10px;
+
 }
 .button{
     background: #fff;
     color: red;
 }
+
 /* font size */
 .F-size1{font-size: 1.1em;}
 .F-size2{font-size: 1.5em;}
@@ -72,22 +75,16 @@ span{
 .m-t{margin-top: 1.5em;}
 .m-b{margin-bottom: 1.5em;}
 /* ====end utilities =============== */
-header .container .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    
-} 
+
+
+
 header .container{
     height: 70px;
 }
 .logo img{
-    max-width: 160px;
+   height: 39px;
 }
-.row nav{
-    /* flex: 1; */
-}
+
 .row nav ul{
     display: flex;
    
@@ -124,6 +121,10 @@ header .container{
 }
 .row .col-1 .btn{
     border:2px #fff solid;
+    
+}
+.row .col-1 .btnCol{
+    color: #fff;
 }
 /* ==================*/
 /* about */
@@ -143,9 +144,7 @@ header .container{
 .about .row .col-2{
     flex-basis: 60%;
 }
-.about .row .col-2 p{
-    /* columns: ; */
-}
+
 /*  */
 .services{
     background: lightgray;
@@ -185,7 +184,18 @@ header .container{
     display: block;
     margin: auto;
 }
+/* }media */
+
 @media(max-width: 380px){
+    nav ul li a{
+        font-size: 10px;
+        
+    }
+    .about .container .row .col-1 img,
+    .main .container .row .col-2 img{
+        max-width: 200px;
+    }
+
     .main .row .btn{
         display: block;
         width: 50%;
@@ -206,6 +216,7 @@ header .container{
         flex-direction: column;
         text-align: center;
     }
+    
     header .container .row .btn{
         display: none;
     }
@@ -213,8 +224,12 @@ header .container{
     .small{
         font-size: 1.4em;
     }
+    .main .row{
+        padding-top: 20px;
+    }
     .main .row img{
         margin-top: 20px;
         max-width : 280px; ;
     }
+    
 }
