@@ -97,8 +97,8 @@ span{
 .F-size4{font-size: 2.5em;}
 .F-size5{font-size: 3em;}
 /* padding */
-.p-bb{margin-top: 0.5em 0;}
-.p-tt{margin-top: 0.5em 0;}
+.p-bb{padding-top: 0.5em 0;}
+.p-tt{padding-top: 0.5em 0;}
 .p-tb{padding: 1em 0;}
 .p-sss{padding: 3em;}
 .p-s{padding: 1em 1em;}
@@ -184,6 +184,7 @@ header .container{
 .services{
     background: lightgray;
     padding: 10px;
+    padding-bottom: 30px;
 }
 .services .row .col-1{
     flex-basis: 25%;
@@ -206,7 +207,7 @@ header .container{
     font-weight: 300;
 }
 .services .row .col-1 img{
-        width: 100px;
+    max-width: 80px;
 }
 .partner{
     background: #000;
