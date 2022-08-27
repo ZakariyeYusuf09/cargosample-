@@ -24,8 +24,31 @@ body{
     --mainbg: #ff0000;
     --footer: #000;
 }
-.text-center{text-align: center;}
+/* menu */
+label i{
+    background: blue;
+    padding: .3em;
+    font-size: 1.6em;
+    color: #fff;
+    border-radius: 5px;
+    transition: all .5s;
+}
+label i:hover{
+    background: #695b60f5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+label{
+    display: none;
+}
+#checkbox{
+    display: none;
+}
+
+
+/* ends */
+/* ================= */
 /* utility classes */
+.text-center{text-align: center;}
 .line{
     width: 200px;
     height: 2px;
@@ -42,8 +65,11 @@ span{
     padding: 0 30px;
     overflow: hidden;
 } 
+header .row{
+    padding: 1em 0;
+}
 .row{
-    /* margin: auto; */
+    /* margin: 0 auto; */
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -100,7 +126,7 @@ span{
     
 }
 
-
+/* some of them may not use */
 /* font size */
 .F-size1{font-size: 1.1em;}
 .F-size2{font-size: 1.5em;}
@@ -127,12 +153,8 @@ span{
 .m-b{margin-bottom: 1.5em;}
 /* ====end utilities =============== */
 
-
-
-header .container{
-    height: 70px;
-}
 .logo img{
+    width: 149px;
    height: 39px;
 }
 
@@ -147,7 +169,7 @@ header .container{
     height: 2px;
     background: orange;
     bottom: 0;
-    display: block;
+    display: flex;
     transform:  scale(0);
     transition: transform .4s;
 }
@@ -245,41 +267,83 @@ header .container{
     
 }
 .partner .container .row img{
-    /* width: 400px; */
     max-width: 200px;
     display: block;
     margin: auto;
 }
+
+.no-visible{
+    display: none;
+}
 /* }media */
 
-@media(max-width: 380px){
-    nav ul li a{
-        font-size: 10px;
+@media(max-width: 800px) {
+    .row ul li::after{
+        all: unset;
+
+    }
+    .no-visible-reponsive{
+        display: none;
+    }
+    .no-visible{
+        display: inline-block;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        transition: none;
+        font-weight: 500;
+    }
+    .btn1:hover{
+        all: unset;
+
+    }
+    .row ul li a:hover{
+        color: #fff;
+    }
+    /* menu */
+
+    label{
+        position: absolute;
+        right: 5px;
+        display: block;
+    }
+    input #checkbox{
+        display: none;
+    }
+    #checkbox:checked ~ nav{
+        display: block;
         
     }
-    .about .container .row .col-1 img,
-    .main .container .row .col-2 img{
-        max-width: 200px;
-    }
 
-    .main .row .btn{
+
+    /* ends */
+    .row nav{
+        display: none;
+        width: 91%;
+        background: lightgray;
+        margin: 10px 0;
+        text-align: center;
+        
+    }
+    
+    .row nav ul{
+        flex-direction: column;
+        transition: all .5s;
+    }
+    .row ul li{
+        margin-right: 0;
+    }
+    .row nav ul li{
+        /* padding: 8px; */
+    }
+    .row ul li a.special{
+        color: #000;
         display: block;
-        width: 50%;
-        margin: 10px auto;
+        padding: 10px;
     }
-    .small{
-        font: 0.5em;
-    }
-    .partner .container .row img{
-        /* width: 400px; */
-        max-width: 140px;
-        display: block;
-        margin: auto;
-    }
-}
-@media(max-width: 800px) {
-    .main{
-       margin-top: 20px;
+    .row ul li a.special:hover{
+        background: #cccc;
+        color: #fff;
     }
     .row{
         flex-direction: column;
@@ -299,5 +363,24 @@ header .container{
     .main .row img{
         margin-top: 20px;
         max-width : 280px; ;
+    }
+}
+@media(max-width: 380px){
+    .about .container .row .col-1 img,
+    .main .container .row .col-2 img{
+        max-width: 200px;
+    }
+    .main .row .btn{
+        display: block;
+        width: 50%;
+        margin: 10px auto;
+    }
+    .small{
+        font: 0.5em;
+    }
+    .partner .container .row img{
+        max-width: 140px;
+        display: block;
+        margin: auto;
     }
 }
